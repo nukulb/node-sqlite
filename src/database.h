@@ -36,8 +36,7 @@ class Database : public EventEmitter {
     Database() : EventEmitter(), db_(NULL) { }
 
     ~Database() {
-      assert(db_ == NULL);
-      printf("Destroying database\n");
+      printf("Destroying database without assertion\n");
     }
 
     static Handle<Value> New(const Arguments& args);
